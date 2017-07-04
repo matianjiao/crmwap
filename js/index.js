@@ -1,6 +1,6 @@
 $(function () {
     //设置左侧栏的高
-    // $(".left-bg").height($(document).height());
+    $(".left-bg").height($(document).height());
 
     //点击侧导航
     $(".click").click(function () {
