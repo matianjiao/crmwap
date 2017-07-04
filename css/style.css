@@ -1,0 +1,23 @@
+html, body, h1, h2, h3, h4, h5, h6, p, a, span, ul, li {
+    margin: 0;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+/*=====清除浮动=====*/
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+.padding-30{
+    padding: 0 1.25rem;
+}

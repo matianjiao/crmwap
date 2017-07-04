@@ -1,0 +1,124 @@
+/*左侧栏*/
+.left-bg{
+    width: 100%;
+    background: rgba(2,2,2,0.3);
+    position: absolute;
+    top: 0;
+    left: 0;
+    /*-moz-transition: all ease .5s; !* Firefox 4 *!*/
+    /*-webkit-transition: all ease .5s; !* Safari 和 Chrome *!*/
+    /*-o-transition: all ease .5s; !* Opera *!*/
+    display: none;
+}
+.home{
+    margin-top: 1.75rem;
+}
+.left-bar {
+    width: 18.333rem;
+    height: 100%;
+    background: #fff;
+    font-size: 16px;
+    position:relative;
+}
+.left-he{
+    font-size: 1.875rem;
+    position: absolute;
+    right: 0.26rem;
+    top:1.16666rem;
+    color: #626262;
+
+}
+.user {
+    padding-top: 4.083rem;
+}
+
+.user-item {
+    width: 2.916rem;
+    height: 2.916rem;
+    margin-left: 4.166rem;
+    display: block;
+}
+
+.name {
+    font-size: 1rem;
+    margin-left: 4.166rem;
+    color: #A9A9A9;
+}
+
+.name1 {
+    color:#2E2E2E ;
+    font-size: 1.1666rem;
+    margin: 0.8333rem 0 0.4166rem 0;
+}
+
+.slide-left .fu {
+    width: 100%;
+}
+
+.fu li {
+    position: relative;
+    cursor: pointer;
+    -moz-transition: all .1s; /* Firefox 4 */
+    -webkit-transition: all .1s; /* Safari 和 Chrome */
+    -o-transition: all .1s; /* Opera */
+}
+
+.current {
+    background: #F9F9F9;
+}
+
+.fu a {
+    padding:1.25rem 0 1.25rem 4.166rem;
+    display: block;
+    color: #2E2E2E;
+    font-size: 1.333rem;
+}
+
+.zi a {
+    color: #909090;
+}
+.fudong-lan{
+    width: 0.5rem;
+    height:2.66rem ;
+    background: #2090FB;
+    position: absolute;
+    left: 0;
+    top:0.8rem;
+    box-shadow: 1px 0px 4px #2090FB;
+    display: none;
+}
+.current-lan{
+    display: block;
+}
+.fu .zi {
+    display: none;
+}
+
+
+
+/*-----------首页 header----------*/
+.header {
+    height: 4.083rem;
+    border: 1px solid rgba(0, 0, 0, 0);
+    text-align: center;
+    font-size: 1.5rem;
+    color: #757575;
+    line-height: 4.083rem;
+
+}
+
+.han {
+    width: 2.125rem;
+    height: 2.5rem;
+    background: url("../images/hanbaobao.png") no-repeat center center;
+    background-size: 100%;
+    margin-top: 0.7915rem;
+    float: left;
+}
+
+.logo {
+    width: 5rem;
+    height: 2.5rem;
+    float: right;
+    margin-top: 0.7915rem;
+}
