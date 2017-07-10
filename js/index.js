@@ -4,7 +4,6 @@ $(function () {
 
     //点击侧导航
     $(".click").click(function () {
-
         //判断当前点击
         if ($(this).attr("zhankai") == "false") {
             //其他回到初始
@@ -36,5 +35,11 @@ $(function () {
         $(".left-bg").fadeIn(300);
     })
 
+
+//    入金
+    $(".banks").click(function () {
+        $(".banks").removeClass("banks-click");
+        $(this).addClass("banks-click");
+    })
 
 })
