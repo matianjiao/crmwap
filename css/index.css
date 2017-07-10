@@ -249,6 +249,7 @@
 .Input {
     border: 1px solid #4A84FF;
     box-shadow: 0px 0px 6px #4A84FF;
+    border-radius: 0;
 }
 
 .InputBank {
@@ -291,6 +292,7 @@
     width: 100%;
     border: none;
     border-bottom: 1px solid #C7C7C7;
+    border-radius: 0;
     margin: 1rem 0 1.25rem;
 }
 .RMB {
@@ -348,6 +350,9 @@ button{
 .bank-chu{
     position: relative;
 }
+.bank-chu-bg{
+    background: #E3E3E3;
+}
 .bank-con img{
     margin-top: 1.25rem;
 }
@@ -367,10 +372,10 @@ button{
     color: #909090;
 }
 .focus-input input{
+    width: 100%;
     border: none;
     border-bottom: 1px solid #C7C7C7;
-    font-size:1.8rem ;
-    height: 1.8rem;
+    border-radius: 0;
     margin: 0.5rem 0 1.8rem;
 }
 .focus-current{
