@@ -38,7 +38,7 @@
     box-shadow: 0 0 10px #39B4EF;
 }
 
-.jqm-round-circle0,.jqm-round-circle1,.jqm-round-circle2 {
+.jqm-round-circle {
     position: absolute;
     background-color: #FFF;
     width: 15.583rem;
