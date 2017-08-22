@@ -607,6 +607,8 @@ button {
 
 .select-bordernone select {
     width: 130%;
+    background: none;
+    border-radius: 0;
 }
 
 .idcardinfo {
