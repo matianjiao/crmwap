@@ -7,7 +7,7 @@
     left: 0;
     display: none;
     overflow: scroll;
-    z-index: 1;
+    z-index: 12;
 }
 
 .home {
@@ -286,7 +286,8 @@
     font-size: 1rem;
     color: #5E5E5E;
 }
-.bank-con input{
+
+.bank-con input {
     font-size: 4.166rem;
     color: #454545;
     width: 100%;
@@ -295,34 +296,39 @@
     border-radius: 0;
     margin: 1rem 0 1.25rem;
 }
+
 .RMB {
     color: #767676;
     font-size: 1.083rem;
 }
-button{
+
+button {
     width: 100%;
     height: 3.25rem;
     background: #2090FB;
-    box-shadow:0 2px 6px #2090FB;
+    box-shadow: 0 2px 6px #2090FB;
     border: none;
     color: #fff;
     font-size: 1.25rem;
     margin-top: 2.75rem;
 }
-.RMB span{
+
+.RMB span {
     border-bottom: 1px solid #979797;
     float: right;
     margin-top: -1px;
 }
-.choose-banks{
+
+.choose-banks {
     font-size: 1.333rem;
     color: #5D5D5D;
 }
 
-.banks-click{
+.banks-click {
     box-shadow: 0 0 14px #ccc;
 }
-.bank-step{
+
+.bank-step {
     width: 90%;
     line-height: 5rem;
     font-size: 1.25rem;
@@ -331,54 +337,402 @@ button{
     left: 5%;
     background: #fff;
 }
-.bank-right-bg{
+
+.bank-right-bg {
     height: 3.416rem;
     top: 0.7916rem;
     background: #909090;
 }
+
 /*-----出金-------*/
-.Out-choose{
+.Out-choose {
     line-height: 3.75rem;
 }
-.Out-choose-a{
+
+.Out-choose-a {
     margin: 0.1rem 1.166rem 0 0;
     float: left;
 }
-.bank-con{
+
+.bank-con {
     padding-bottom: 3.916rem;
 }
-.bank-chu{
+
+.bank-chu {
     position: relative;
 }
-.bank-chu-bg{
+
+.bank-chu a {
+    display: block;
+}
+
+.bank-chu-bg {
     background: #E3E3E3;
 }
-.bank-con img{
-    margin-top: 1.25rem;
+
+.bank-con img {
+    margin-top: 1.35rem;
 }
-.bank-con .kahao{
+
+.bank-con .kahao {
     position: absolute;
     bottom: 12%;
     left: 20%;
     color: #5E5E5E;
-    font-size:1.5rem ;
+    font-size: 1.5rem;
 }
+
 /*-----修改密码-----*/
-.setpassword{
-    margin-top:3.5rem ;
+.setpassword {
+    margin-top: 3.5rem;
 }
-.password{
+
+.password {
     font-size: 1.083rem;
     color: #909090;
 }
-.focus-input input{
+
+.focus-input input {
     width: 100%;
     border: none;
     border-bottom: 1px solid #C7C7C7;
     border-radius: 0;
-    margin: 0.5rem 0 1.8rem;
+    padding: 0.5rem 0;
+    color: #454545;
 }
-.focus-current{
+
+.focus-current {
     border-bottom: 1px solid #2090FB !important;
-    box-shadow: 0px 4px 1px #d4eaff;;
+    box-shadow: 0px 4px 1px #dceeff;
+}
+
+.focus-zi {
+    color: #2190FB !important;
+}
+
+.search-current {
+    border: 1px solid #2090FB !important;
+    box-shadow: 0px 0px 5px #dceeff;
+}
+
+.setpassword-success {
+    position: absolute;
+    top: 4.083rem;
+    left: 0;
+    display: none;
+}
+
+/*-----找回密码----*/
+.focus-text {
+    color: #ABABAB;
+    position: relative;
+}
+
+.findpassword {
+    margin-top: 2rem;
+}
+
+.email-phone-find {
+    color: #ABABAB;
+    font-size: 1.25rem;
+    border-bottom: 1px solid #D8D8D8;
+    line-height: 3.5rem;
+    margin-bottom: 1.8rem;
+    position: relative;
+}
+
+.current-find {
+    color: #454545;
+    border-bottom: 1px solid #2090FB;
+}
+
+.find-con {
+    width: 100%;
+    position: absolute;
+    top: 6rem;
+    left: 0;
+    display: none;
+}
+
+.find-con-dis {
+    display: block;
+}
+
+.next-button {
+    width: 100%;
+    height: 3.25rem;
+    background: #2090FB;
+    box-shadow: 0 2px 6px #2090FB;
+    border: none;
+    color: #fff;
+    font-size: 1.25rem;
+    margin-top: 14rem;
+    line-height: 3.25rem;
+    text-align: center;
+}
+
+.password-group {
+    position: relative;
+    margin: 0 0 1.8rem;
+}
+
+.error {
+    color: #FD757C;
+}
+
+.sure {
+    color: #2090FB;
+}
+
+.password-group i {
+    position: absolute;
+    right: 0;
+    top: 1.8rem;
+    font-size: 1.5rem;
+}
+
+.password-group span {
+    position: absolute;
+    right: 2rem;
+    top: 1.9rem;
+    font-size: 1.166rem;
+    color: #ABABAB;
+}
+
+.reset {
+    display: none;
+}
+
+/*登录*/
+.password-group p {
+    font-size: 0.916rem;
+}
+
+/*注册*/
+.tishi4 {
+    width: 100%;
+    position: absolute;
+}
+
+.tishi-top {
+    width: 25%;
+    height: 2px;
+    background: #4A84FF;
+    position: absolute;
+    left: 0;
+    top: -2rem;
+}
+
+.tishi-top2 {
+    left: 25%;
+}
+
+.tishi-top3 {
+    left: 50%;
+}
+
+.tishi-top4 {
+    left: 75%;
+}
+
+.select {
+    height: 30px;
+    width: 33.33%;
+    text-align: center;
+    overflow: hidden;
+    float: left;
+    border-bottom: 1px solid #C7C7C7;
+    line-height: 30px;
+    position: relative;
+}
+
+.select select {
+    width: 120%;
+    border: none;
+    height: 100%;
+    color: #454545;
+}
+
+.border-right-bg1 {
+    height: 1.4rem;
+    top: 0.65rem;
+}
+
+.upload-idcard, .zhuce-success {
+    font-size: 1.083rem;
+    color: #767676;
+    margin-bottom: 1.6rem;
+}
+
+.idcard-zheng {
+    color: #AAAAAA;
+    font-size: 1.166rem;
+}
+
+.idcard-img {
+    margin: 0.416rem 0 1.333rem;
+}
+
+.zhuce-success {
+    margin-bottom: 1.833rem;
+}
+
+.not-email {
+    font-size: 1.083rem;
+    color: #2190FB;
+    margin-top: 1.166rem;
+    display: block;
+}
+
+.user-head {
+    margin: 0.791rem 0;
+}
+
+.uesr-title {
+    font-size: 1.166rem;
+    color: #AAAAAA;
+}
+
+.uesr-content {
+    font-size: 1.416rem;
+    color: #454545;
+    border: none;
+    margin-bottom: 2rem;
+    width: 100%;
+}
+
+.select-bordernone {
+    border-bottom: none;
+}
+
+.select-bordernone select {
+    width: 130%;
+}
+
+.idcardinfo {
+    font-size: 1.333rem;
+    color: #454545;
+    margin: 0.8rem 0 1rem;
+}
+
+/*银行信息*/
+.zhu {
+    color: #A9A9A9;
+    font-size: 1.083rem;
+    margin-top: 5rem;
+}
+
+/*下级用户*/
+.search {
+    width: 92%;
+    border-radius: 50px;
+    border: 1px solid #AAAAAA;
+    margin: 0.666rem auto 0;
+    position: relative;
+}
+
+.search input {
+    border: none;
+    margin-left: 1.25rem;
+    padding: 0.5rem 0;
+    color: #A9A9A9;
+    font-size: 1.083rem;
+    width: 90%;
+}
+
+.search-icon {
+    position: absolute;
+    right: 1.25rem;
+    top: 0.291rem;
+}
+
+.date {
+    padding: 1rem 1.25rem;
+    border-bottom: 1px solid #EDEDED;
+    border-top: 1px solid #EDEDED;
+    margin-top: 0.666rem;
+    font-size: 1.083rem;
+    color: #ABABAB;
+}
+
+.date input {
+    border: none;
+    font-size: 1.166rem;
+    color: #454545;
+}
+
+#datefrom {
+    width: 60%;
+    margin-left: 5%;
+}
+
+#dateto {
+    text-align: right;
+    width: 60%;
+    margin-right: 5%;
+}
+
+.date-border-right-bg {
+    top: 0;
+}
+
+.agentuser {
+    width: 200%;
+}
+
+.agentuser-item {
+    width: 50% !important;
+    height: 3.75rem;
+    line-height: 3.74rem;
+    font-size: 1.25rem;
+    color:#5D5D5D ;
+    vertical-align: middle;
+    /*padding: 1.25rem 0;*/
+}
+.agentuser-item img{
+    margin-right: 1.25rem;
+    vertical-align: middle;
+}
+.agent-border-bottom{
+    border-bottom: 1px solid #D8D8D8;
+}
+.agent-right{
+    width: 8rem;
+    height: 100%;
+    text-align: right;
+    margin-right: 1.25rem;
+}
+.cir{
+    width: 0.416rem;
+    height: 0.416rem;
+    border-radius: 50%;
+    border: 1px solid #C7C7C7;
+    margin: 1.77rem 0.333rem 0 0;
+}
+.lower-info{
+    display: inline-block;
+    color: #8F8F8F;
+    position: relative;
+}
+.lower-info a{
+    color:#2190FB ;
+}
+.lower-border{
+    width: 100%;
+    height: 1px;
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+}
+.border-red{
+    border-bottom:1px solid #FD757C;
+}
+.border-yellow{
+    border-bottom:1px solid #FDCD50;
+}
+.border-blue{
+    border-bottom:1px solid #4A84FF;
+}
+.border-green{
+    border-bottom:1px solid #16D578;
 }

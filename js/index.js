@@ -26,12 +26,12 @@ $(function () {
 
 //    收缩侧导航
     $(".left-he").click(function () {
-        $(".left-bar").animate({marginLeft:"-18.333rem"},300);
+        $(".left-bar").animate({marginLeft: "-18.333rem"}, 300);
         $(".left-bg").fadeOut(300);
     })
     //点击汉堡包 出现侧边栏
     $(".han").click(function () {
-        $(".left-bar").animate({marginLeft:"0rem"},300);
+        $(".left-bar").animate({marginLeft: "0rem"}, 300);
         $(".left-bg").fadeIn(300);
     })
 
@@ -41,5 +41,64 @@ $(function () {
         $(".banks").removeClass("banks-click");
         $(this).addClass("banks-click");
     })
+
+
+//    input选中状态
+    $(".password-group input").focus(function () {
+        $(".password-group input").removeClass("focus-current");
+        $(".password-group .password").removeClass("focus-zi");
+        $(this).addClass("focus-current");
+        $(this).parent().find(".password").addClass("focus-zi");
+    })
+
+
+//    找回密码
+    $(".email-phone-find").click(function () {
+        var index = $(".email-phone-find").index($(this));
+        $(".find-con").removeClass("find-con-dis");
+        $(".find-con").eq(index).addClass("find-con-dis");
+        $(".email-phone-find").removeClass("current-find");
+        $(this).addClass("current-find");
+    })
+    
+    $(".next-button").click(function () {
+        $(".findpassword1").css({display:"none"});
+        $(".reset").css({display:"block"});
+    })
+
+//搜索
+$(".search input").focus(function () {
+    $(this).addClass("focus-zi");
+    $(".search .search-icon").addClass("focus-zi");
+    $(".search").addClass("search-current");
+})
+    $(".search input").blur(function () {
+        $(this).removeClass("focus-zi");
+        $(".search .search-icon").removeClass("focus-zi");
+        $(".search").removeClass("search-current");
+    })
+
+//    时间
+    var mydate = new Date();
+    $(".date input").attr("value",mydate.getFullYear()+" - "+ mydate.getMonth()+" - "+mydate.getDate());
+
+
+    //模拟树
+    $(".hide-show").click(function () {
+        console.log($(this).parents(".parent").attr("kai"))
+        if($(this).parent().parent().parent().parent().parent().attr("kai")=="true"){
+            $(this).attr("src", "images/silde_03.png");
+            // $(this).css({transform:"rotate(180deg)"})
+            $(this).parent().parent().parent().parent().parent().children(".zi").css({display:"none"});
+            $(this).parent().parent().parent().parent().parent().attr("kai","false");
+        }else{
+            $(this).attr("src", "images/silde_06.png");
+            $(this).parent().parent().parent().parent().parent().children(".zi").css({display:"block"});
+            $(this).parent().parent().parent().parent().parent().attr("kai","true");
+        }
+
+    })
+
+
 
 })

@@ -5,7 +5,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>入金</title>
+    <title>出金</title>
     <link rel="stylesheet" href="fonts/iconfont.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
@@ -99,28 +99,60 @@
 
 <!--header-->
 <div class="header padding-lr-30 border-bottom1">
-    入金
+    银行信息
     <div class="han"></div>
     <div class="logo">
         <img src="images/logo.png" width="100%" alt="">
     </div>
 </div>
 
-<div class="Input margin-lr30-tb40">
-    <div class="InputBank padding-lr-30">
-        中国农业银行（1234）
-        <div class="bank-back">
-            <a href="InputMoney.html"><i class="iconfont icon-gengduo"></i></a>
-        </div>
+<div class="choose-banks padding-lr-30 Out-choose">
+    <a href="BankInfo.html" class="Out-choose-a">
+        <i class="iconfont icon-fanhui" style="font-size: 1.833rem;color: #5D5D5D;"></i>
+    </a>银行卡信息：
+</div>
+
+<div class=" margin-lr-125 focus-input" style="margin-top:1.666rem">
+    <div class="password-group">
+        <div class="password">开户姓名</div>
+        <input type="text" value="金文辉">
     </div>
-    <form action="">
-        <div class="bank-con padding-lr100-tb100">
-            <div class="money-title">入金金额</div>
-            <input type="text" value="$0000">
-            <div class="RMB">人民币：￥0.00</div>
-            <button>确 认 入 金</button>
+    <div class="password-group">
+        <div class="password">银行卡卡号</div>
+        <input type="text" value="1234 1234 1234 1234 12">
+    </div>
+    <div class="password-group">
+        <div class="password">银行卡开户城市</div>
+        <div class="select">
+            <select class="" id="" name="">
+                <option value="">中国</option>
+                <option value="">美国</option>
+            </select>
+            <div class="border-right-bg border-right-bg1"></div>
         </div>
-    </form>
+        <div class="select">
+            <select class="" id="" name="">
+                <option value="北京">北京</option>
+                <option value="">上海</option>
+            </select>
+            <div class="border-right-bg border-right-bg1"></div>
+        </div>
+        <div class="select">
+            <select class="" id="" name="">
+                <option value="">东城</option>
+                <option value="">大兴</option>
+            </select>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+    <div class="password-group">
+        <div class="password">银行卡所属银行</div>
+        <input type="text" value="中国工商银行">
+    </div>
+    <div class="password-group">
+        <div class="password">银行卡开户支行</div>
+        <input type="text" value="请输入银行卡开户行">
+    </div>
 
 </div>
 

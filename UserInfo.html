@@ -5,7 +5,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>入金</title>
+    <title>首页</title>
     <link rel="stylesheet" href="fonts/iconfont.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
@@ -45,7 +45,7 @@
 
             <div class="click" zhankai="false">
                 <li>
-                    <div class="fudong-lan"></div>
+                    <div class="fudong-lan current-lan"></div>
                     <a href="javascript:void(0);">个人信息</a>
                 </li>
                 <ul class="zi">
@@ -69,7 +69,7 @@
 
             <div class="click" zhankai="false">
                 <li>
-                    <div class="fudong-lan current-lan"></div>
+                    <div class="fudong-lan"></div>
                     <a href="javascript:void(0);">资金管理</a>
                 </li>
                 <ul class="zi">
@@ -98,31 +98,64 @@
 
 
 <!--header-->
-<div class="header padding-lr-30 border-bottom1">
-    入金
+<div class="header padding-lr-30">
+    账户信息
     <div class="han"></div>
     <div class="logo">
         <img src="images/logo.png" width="100%" alt="">
     </div>
 </div>
-
-<div class="Input margin-lr30-tb40">
-    <div class="InputBank padding-lr-30">
-        中国农业银行（1234）
-        <div class="bank-back">
-            <a href="InputMoney.html"><i class="iconfont icon-gengduo"></i></a>
+<div class="user-head text-center"><img src="images/userinfo_03.png" alt="" width="60px"></div>
+<div class="row padding-lr-30">
+    <div class="col-xs-5">
+        <div class="uesr-title">用户姓名</div>
+        <input class="uesr-content" value="嘉禾测试">
+        <div class="uesr-title">MT4 账号</div>
+        <input class="uesr-content" value="678990711">
+        <div class="uesr-title">手机号码</div>
+        <input class="uesr-content" value="18511760790">
+        <div class="uesr-title">请选择国家</div>
+        <div class="select select-bordernone">
+            <select class="" id="" name="">
+                <option value="">中国</option>
+                <option value="">美国</option>
+            </select>
+        </div>
+        <div class="select select-bordernone">
+            <select class="" id="" name="">
+                <option value="北京">北京</option>
+                <option value="">上海</option>
+            </select>
+        </div>
+        <div class="select select-bordernone">
+            <select class="" id="" name="">
+                <option value="">东城</option>
+                <option value="">大兴</option>
+            </select>
         </div>
     </div>
-    <form action="">
-        <div class="bank-con padding-lr100-tb100">
-            <div class="money-title">入金金额</div>
-            <input type="text" value="$0000">
-            <div class="RMB">人民币：￥0.00</div>
-            <button>确 认 入 金</button>
-        </div>
-    </form>
+    <div class="col-xs-7 text-right">
+        <div class="uesr-title">性别</div>
+        <input class="uesr-content text-right" value="保密">
+        <div class="uesr-title">邮箱 </div>
+        <input class="uesr-content text-right" value="550366689@qq.com">
+        <div class="uesr-title">身份证号</div>
+        <input class="uesr-content text-right" value="123456789987654321">
+        <div class="uesr-title">杠杆</div>
+        <input class="uesr-content text-right" value="400">
+    </div>
+    <div class="uesr-title">详细地址：</div>
+    <input class="uesr-content" value="广东省普宁市洪阳镇马湖村下寨30号">
+    <div class="uesr-title">推广链接：</div>
+    <input class="uesr-content" value="http://crm.krg-fx.com">
 
+    <div class="idcardinfo text-center">身份证信息</div>
+    <div class="idcard-zheng">身份证正面</div>
+    <img class="idcard-img" src="images/idcard_03.png" alt="" width="100%">
+    <div class="idcard-zheng">身份证反面</div>
+    <img class="idcard-img" src="images/idcard_03.png" alt="" width="100%">
 </div>
+
 
 
 </body>

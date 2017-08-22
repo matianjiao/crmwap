@@ -1,0 +1,19 @@
+@media screen and (min-width:414px) {
+    .border-right-bg1{
+        height: 1.4rem;
+        top: 0.4rem;
+    }
+}
+@media screen and (max-width:320px) {
+    #datefrom{
+        width: 60%;
+        margin-left:5%;
+    }
+    #dateto{
+        width: 60%;
+        margin-right:5%;
+    }
+    .lower-info a{
+        font-size: 12px;
+    }
+}
