@@ -3,6 +3,9 @@
         height: 1.4rem;
         top: 0.4rem;
     }
+    .slide-right{
+        padding-left: 0.8rem;
+    }
 }
 @media screen and (max-width:320px) {
     #datefrom{
@@ -15,5 +18,8 @@
     }
     .lower-info a{
         font-size: 12px;
+    }
+    .lower-border{
+        bottom: -1px;
     }
 }
