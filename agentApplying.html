@@ -30,7 +30,12 @@
 
     <script>
         $(function () {
-            var mySwiper = new Swiper('#swiper-container1');
+            var mySwiper = new Swiper('#swiper-container1', {
+                autoplay: 3000,//可选选项，自动滑动
+                speed: 800,
+                //如果设置为false，用户操作swiper之后自动切换不会停止，每次都会重新启动autoplay。
+                autoplayDisableOnInteraction: false,
+            })
         })
     </script>
 </head>
@@ -128,35 +133,23 @@
                 </div>
             </div>
         </div>
-        <!--<div class="ban swiper-slide">-->
-            <!--<div class="jqm-round-wrap swiper-slide">-->
-                <!--<div class="jqm-round-bg"></div>-->
-                <!--<canvas id="jqm-round-sector1" class="jqm-round-sector"></canvas>-->
-                <!--<div class="jqm-round-circle jqm-round-circle1">-->
-                    <!--<h1>人数</h1>-->
-                    <!--<p>4/5</p>-->
-                <!--</div>-->
-            <!--</div>-->
-        <!--</div>-->
-        <!--<div class="ban swiper-slide">-->
-            <!--<div class="jqm-round-wrap swiper-slide">-->
-                <!--<div class="jqm-round-bg"></div>-->
-                <!--<canvas id="jqm-round-sector2" class="jqm-round-sector"></canvas>-->
-                <!--<div class="jqm-round-circle jqm-round-circle2" >-->
-                    <!--<h1>交易手次</h1>-->
-                    <!--<p>1/2</p>-->
-                <!--</div>-->
-            <!--</div>-->
-        <!--</div>-->
-    </div>
-    <div class="banner swiper-wrapper">
         <div class="ban swiper-slide">
-            <div class="jqm-round-wrap">
+            <div class="jqm-round-wrap swiper-slide">
                 <div class="jqm-round-bg"></div>
                 <canvas id="jqm-round-sector1" class="jqm-round-sector"></canvas>
                 <div class="jqm-round-circle jqm-round-circle1">
-                    <h1>入金金额</h1>
-                    <p>800/1200</p>
+                    <h1>人数</h1>
+                    <p>4/5</p>
+                </div>
+            </div>
+        </div>
+        <div class="ban swiper-slide">
+            <div class="jqm-round-wrap swiper-slide">
+                <div class="jqm-round-bg"></div>
+                <canvas id="jqm-round-sector2" class="jqm-round-sector"></canvas>
+                <div class="jqm-round-circle jqm-round-circle2" >
+                    <h1>交易手次</h1>
+                    <p>1/2</p>
                 </div>
             </div>
         </div>
