@@ -739,3 +739,37 @@ button {
 .border-green{
     border-bottom:1px solid #16D578;
 }
+
+/*代理用户*/
+.clear {
+    height: 0;
+    overflow: hidden;
+    clear: both
+}
+
+.wraper {
+    width: 640px;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+    /*background: url(../Images/bg.jpg) repeat;*/
+}
+
+.scroll_pic_view {
+    position: relative;
+}
+
+.scroll_pic_view > div {
+    width: 10000px;
+    overflow: hidden;
+}
+
+.scroll_pic_view ul {
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.scroll_pic_view ul li {
+    float: left;
+}
