@@ -740,36 +740,98 @@ button {
     border-bottom:1px solid #16D578;
 }
 
-/*代理用户*/
-.clear {
-    height: 0;
-    overflow: hidden;
-    clear: both
+
+/*代理申请记录*/
+.zhuangtai{
+    text-align: center;
+    font-size: 1.25rem;
+}
+.current-active{
+    color: #454545;
+}
+.zhuangtai-card{
+    color:#454545;
+    border: 1px solid #E2E2E2;
+    margin: 1.666rem 1.25rem;
+}
+.zhuangtai-top{
+    font-size: 1.25rem;
+    line-height: 3.333rem;
+    border-bottom: 1px solid #E2E2E2;
+}
+.zhuangtai-border-right-bg{
+    top:0.8rem;
+}
+.zhuangtai-green{
+    color: #4AB253;
+}
+.zhuangtai-red{
+    color: #EC4856;
+}
+.zhuangtai-hui{
+    color: #A9A9A9;
 }
 
-.wraper {
-    width: 640px;
-    height: 100%;
-    margin: 0 auto;
-    position: relative;
-    /*background: url(../Images/bg.jpg) repeat;*/
+/*历史订单*/
+.search1{
+    width: 82%;
+    float: right;
+    margin-right: 1.25rem;
 }
-
-.scroll_pic_view {
-    position: relative;
+.tongji-he{
+    color: #A9A9A9;
+    font-size: 1.083rem;
+    margin:1.25rem 0 ;
 }
-
-.scroll_pic_view > div {
-    width: 10000px;
-    overflow: hidden;
-}
-
-.scroll_pic_view ul {
-    width: 100%;
-    white-space: nowrap;
-    overflow: hidden;
-}
-
-.scroll_pic_view ul li {
+.tongji-he div{
+    margin-right: 5%;
     float: left;
+}
+.his-size{
+    font-size: 1.25rem;
+}
+.his-red{
+    color: #FD757C;
+}
+.his-green{
+    color: #16D578;
+}
+.history{
+    width: 100%;
+    display: inline-block;
+}
+.history img{
+    margin-right: 0.833rem;
+    margin-top: 1px;
+}
+.his1{
+    font-size: 1.083rem;
+    color: #5D5D5D;
+}
+.his-zi{
+    padding:0 0 1rem 1.2rem;
+    margin:0 0 0.5rem 7px;
+    border-left: 1px solid #D8D8D8;
+}
+.his2{
+    font-size: 1.166rem;
+    color: #AAAAAA;
+    margin-top: 0.8rem;
+}
+.his3{
+    font-size:2rem;
+    color: #454545;
+}
+.his4{
+    font-size:1.083rem;
+    color: #AAAAAA;
+}
+.his5{
+    font-size:1.083rem;
+    color: #5D5D5D;
+    margin:0.8rem 0 0rem;
+}
+.his-size span{
+    margin: 0.5rem 0 1.5rem 0;
+    display: block;
 }

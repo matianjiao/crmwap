@@ -5,19 +5,17 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>代理申请</title>
+    <title>代理申请记录</title>
     <link rel="stylesheet" href="fonts/iconfont.css">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/swiper.min.css">
-    <link rel="stylesheet" href="css/circle.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/media.css">
+    <script src="js/datePicker.js"></script>
     <script src="js/swiper.js"></script>
     <script src="js/jquery.js"></script>
     <script src="js/jquery-1.10.2.js"></script>
-    <script src="js/cir.js"></script>
-    <script src="js/circle.js"></script>
     <script src="js/index.js"></script>
     <script>
         (function (win, doc) {
@@ -26,17 +24,6 @@
             };
         })(window, document);
 
-    </script>
-
-    <script>
-        $(function () {
-            var mySwiper = new Swiper('#swiper-container1', {
-                autoplay: 3000,//可选选项，自动滑动
-                speed: 800,
-                //如果设置为false，用户操作swiper之后自动切换不会停止，每次都会重新启动autoplay。
-                autoplayDisableOnInteraction: false,
-            })
-        })
     </script>
 </head>
 <body>
@@ -114,52 +101,93 @@
 
 <!--header-->
 <div class="header padding-lr-30 border-bottom1">
-    代理申请
+    下级用户
     <div class="han"></div>
     <div class="logo">
         <img src="images/logo.png" width="100%" alt="">
     </div>
 </div>
 
-<div class="swiper-container chuangkou" id="swiper-container1">
-    <div class="banner swiper-wrapper">
-        <div class="ban swiper-slide">
-            <div class="jqm-round-wrap">
-                <div class="jqm-round-bg"></div>
-                <canvas id="jqm-round-sector0" class="jqm-round-sector"></canvas>
-                <div class="jqm-round-circle jqm-round-circle0">
-                    <h1>入金金额</h1>
-                    <p>800/1200</p>
-                </div>
-            </div>
-        </div>
-        <div class="ban swiper-slide">
-            <div class="jqm-round-wrap swiper-slide">
-                <div class="jqm-round-bg"></div>
-                <canvas id="jqm-round-sector1" class="jqm-round-sector"></canvas>
-                <div class="jqm-round-circle jqm-round-circle1">
-                    <h1>人数</h1>
-                    <p>4/5</p>
-                </div>
-            </div>
-        </div>
-        <div class="ban swiper-slide">
-            <div class="jqm-round-wrap swiper-slide">
-                <div class="jqm-round-bg"></div>
-                <canvas id="jqm-round-sector2" class="jqm-round-sector"></canvas>
-                <div class="jqm-round-circle jqm-round-circle2" >
-                    <h1>交易手次</h1>
-                    <p>1/2</p>
-                </div>
-            </div>
-        </div>
+<!--搜索-->
+<div class="search">
+    <input type="text" placeholder="请输入您要查找的用户">
+    <i class="iconfont icon-icon-test search-icon"></i>
+</div>
+<div class="date zhuangtai">
+    <div class="row">
+        <div class="col-xs-2 zhuangtai-click current-active text-left">全部</div>
+        <div class="col-xs-4 zhuangtai-click">未审核</div>
+        <div class="col-xs-4 zhuangtai-click">未通过</div>
+        <div class="col-xs-2 zhuangtai-click text-right">已通过</div>
     </div>
 </div>
-<div class="zhu padding-lr-30">注：当代理人数达到0人以上，交易手次达到0次以上，交易金额达到0.00以上，才能申请代理。</div>
-<div class="row border-top1 bank-step">
-    <div class="col-xs-12 text-center"><a href="#" style="color: #2190FB;width: 100%;height: 100%;display: inline-block">申请代理</a></div>
+<div class="date" style="margin-top: 0;border-top: none">
+    <div class="row">
+        <div class="col-xs-6">起<input id="datefrom" >
+            <div class="border-right-bg date-border-right-bg"></div>
+        </div>
+        <div class="col-xs-6 text-right"><input id="dateto">止</div>
+    </div>
 </div>
 
+<script>
+    var calendar = new datePicker();
+    calendar.init({
+        'trigger': '#datefrom', /*按钮选择器，用于触发弹出插件*/
+        'type': 'date', /*模式：date日期；datetime日期时间；time时间；ym年月；*/
+        'minDate': '1900-1-1', /*最小日期*/
+        'maxDate': '2100-12-31', /*最大日期*/
+        'onSubmit': function () {/*确认时触发事件*/
+            var theSelectData = calendar.value;
+        },
+        'onClose': function () {/*取消时触发事件*/
+        }
+    });
+    var calendar1 = new datePicker();
+    calendar1.init({
+        'trigger': '#dateto', /*按钮选择器，用于触发弹出插件*/
+        'type': 'date', /*模式：date日期；datetime日期时间；time时间；ym年月；*/
+        'minDate': '1900-1-1', /*最小日期*/
+        'maxDate': '2100-12-31', /*最大日期*/
+        'onSubmit': function () {/*确认时触发事件*/
+            var theSelectData = calendar.value;
+        },
+        'onClose': function () {/*取消时触发事件*/
+        }
+    });
+</script>
+
+
+<div class="zhuangtai-card">
+    <div class="padding-lr-30 zhuangtai-top">
+        <span>安琪</span>
+        <span style="float: right">2016.12.08  13:56:50</span>
+    </div>
+    <div class="row zhuangtai-top" style="border-bottom: none">
+        <div class="col-xs-6 text-center zhuangtai-red">拒 绝
+            <div class="border-right-bg zhuangtai-border-right-bg"></div>
+        </div>
+        <div class="col-xs-6 text-center zhuangtai-green">同 意</div>
+    </div>
+</div>
+<div class="zhuangtai-card">
+    <div class="padding-lr-30 zhuangtai-top">
+        <span>安琪</span>
+        <span style="float: right">2016.12.08  13:56:50</span>
+    </div>
+    <div class="row zhuangtai-top" style="border-bottom: none">
+        <div class="col-xs-12 text-center zhuangtai-hui">已 同 意</div>
+    </div>
+</div>
+<div class="zhuangtai-card">
+    <div class="padding-lr-30 zhuangtai-top">
+        <span>安琪</span>
+        <span style="float: right">2016.12.08  13:56:50</span>
+    </div>
+    <div class="row zhuangtai-top" style="border-bottom: none">
+        <div class="col-xs-12 text-center zhuangtai-hui">已 拒 绝</div>
+    </div>
+</div>
 
 </body>
 </html>

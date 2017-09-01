@@ -60,18 +60,18 @@ $(function () {
         $(".email-phone-find").removeClass("current-find");
         $(this).addClass("current-find");
     })
-    
+
     $(".next-button").click(function () {
-        $(".findpassword1").css({display:"none"});
-        $(".reset").css({display:"block"});
+        $(".findpassword1").css({display: "none"});
+        $(".reset").css({display: "block"});
     })
 
 //搜索
-$(".search input").focus(function () {
-    $(this).addClass("focus-zi");
-    $(".search .search-icon").addClass("focus-zi");
-    $(".search").addClass("search-current");
-})
+    $(".search input").focus(function () {
+        $(this).addClass("focus-zi");
+        $(".search .search-icon").addClass("focus-zi");
+        $(".search").addClass("search-current");
+    })
     $(".search input").blur(function () {
         $(this).removeClass("focus-zi");
         $(".search .search-icon").removeClass("focus-zi");
@@ -80,25 +80,41 @@ $(".search input").focus(function () {
 
 //    时间
     var mydate = new Date();
-    $(".date input").attr("value",mydate.getFullYear()+" - "+ mydate.getMonth()+" - "+mydate.getDate());
+    $(".date input").attr("value", mydate.getFullYear() + " - " + mydate.getMonth() + " - " + mydate.getDate());
 
 
     //模拟树
     $(".hide-show").click(function () {
         console.log($(this).parents(".parent").attr("kai"))
-        if($(this).parent().parent().parent().parent().parent().attr("kai")=="true"){
+        if ($(this).parent().parent().parent().parent().parent().attr("kai") == "true") {
             $(this).attr("src", "images/silde_03.png");
             // $(this).css({transform:"rotate(180deg)"})
-            $(this).parent().parent().parent().parent().parent().children(".zi").css({display:"none"});
-            $(this).parent().parent().parent().parent().parent().attr("kai","false");
-        }else{
+            $(this).parent().parent().parent().parent().parent().children(".zi").css({display: "none"});
+            $(this).parent().parent().parent().parent().parent().attr("kai", "false");
+        } else {
             $(this).attr("src", "images/silde_06.png");
-            $(this).parent().parent().parent().parent().parent().children(".zi").css({display:"block"});
-            $(this).parent().parent().parent().parent().parent().attr("kai","true");
+            $(this).parent().parent().parent().parent().parent().children(".zi").css({display: "block"});
+            $(this).parent().parent().parent().parent().parent().attr("kai", "true");
         }
-
     })
 
+//    代理申请记录
+    $(".zhuangtai-click").click(function () {
+        $(".zhuangtai-click").removeClass("current-active");
+        $(this).addClass("current-active");
+    })
 
+//历史记录
+    $(".his-click").click(function () {
+        if ($(this).attr("hiskai") == "true") {
+            $(this).attr("src", "images/silde_03.png");
+            $(this).parent().parent().find(".his-zi").css({display: "none"});
+            $(this).attr("hiskai","false");
+        }else{
+            $(this).attr("src", "images/silde_06.png");
+            $(this).parent().parent().find(".his-zi").css({display: "block"});
+            $(this).attr("hiskai","true");
+        }
+    })
 
 })

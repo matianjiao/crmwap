@@ -22,4 +22,7 @@
     .lower-border{
         bottom: -1px;
     }
+    .history img {
+         margin-right: 0.4rem;
+    }
 }

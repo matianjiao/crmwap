@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>历史订单</title>
+    <link rel="stylesheet" href="fonts/iconfont.css">
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/media.css">
+    <script src="js/datePicker.js"></script>
+    <script src="js/swiper.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery-1.10.2.js"></script>
+    <script src="js/index.js"></script>
+    <script>
+        (function (win, doc) {
+            win.onload = win.onresize = function () {
+                doc.documentElement.style.fontSize = doc.documentElement.clientWidth * 12 / 375 + 'px';
+            };
+        })(window, document);
+
+    </script>
+</head>
+<body>
+<!--左侧栏-->
+<div class="left-bg">
+    <div class="left-bar">
+        <i class="iconfont left-he icon-fanhui"></i>
+        <div class="user">
+            <div class="user-item" style="background: url(images/user_03.png); background-size: cover;"></div>
+            <div class="name">
+                <p class="name1">嘉禾测试</p>
+                <p>678990711</p>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <ul class="fu">
+            <li class="home">
+                <div class="fudong-lan"></div>
+                <a href="index.html">首页</a>
+            </li>
+
+            <div class="click" zhankai="false">
+                <li>
+                    <div class="fudong-lan"></div>
+                    <a href="javascript:void(0);">个人信息</a>
+                </li>
+                <ul class="zi">
+                    <a href="UserInfo.html">账户信息</a>
+                    <a href="BankInfo.html">银行信息</a>
+                    <a href="setPassword.html">修改密码</a>
+                </ul>
+            </div>
+
+
+            <div class="click" zhankai="false">
+                <li>
+                    <div class="fudong-lan current-lan"></div>
+                    <a href="javascript:void(0);">订单管理</a>
+                </li>
+                <ul class="zi">
+                    <a href="historyList.html">历史订单</a>
+                    <a href="chicangList.html">持仓订单</a>
+                </ul>
+            </div>
+
+            <div class="click" zhankai="false">
+                <li>
+                    <div class="fudong-lan"></div>
+                    <a href="javascript:void(0);">资金管理</a>
+                </li>
+                <ul class="zi">
+                    <a href="InputMoney.html">入金</a>
+                    <a href="OutputMoney.html">出金</a>
+                    <a href="InOutputList.html">出入金记录</a>
+                </ul>
+            </div>
+
+            <div class="click" zhankai="false">
+                <li>
+                    <div class="fudong-lan"></div>
+                    <a href="javascript:void(0);">代理专区</a>
+                </li>
+                <ul class="zi">
+                    <a href="agentApplying.html">代理申请</a>
+                    <a href="agentApplyingList.html">代理申请记录</a>
+                    <a href="ApplyingList.html">申请记录</a>
+                    <a href="rake-back.html">返佣记录</a>
+                    <a href="lowerAgent.html">下级用户</a>
+                </ul>
+            </div>
+        </ul>
+    </div>
+</div>
+
+
+<!--header-->
+<div class="header padding-lr-30 border-bottom1">
+    历史订单
+    <div class="han"></div>
+    <div class="logo">
+        <img src="images/logo.png" width="100%" alt="">
+    </div>
+</div>
+
+<!--搜索-->
+<div class="clearfix">
+    <img src="images/tubiao_03.png" alt="" width="18px" style="margin: 1.2rem 0 0 1.25rem;">
+    <div class="search search1">
+        <input type="text" placeholder="请输入您要查找的用户">
+        <i class="iconfont icon-icon-test search-icon"></i>
+    </div>
+</div>
+
+<div class="date zhuangtai">
+    <div class="row">
+        <div class="col-xs-2 zhuangtai-click current-active text-left">全部</div>
+        <div class="col-xs-3 zhuangtai-click">盈</div>
+        <div class="col-xs-3 zhuangtai-click">亏</div>
+        <div class="col-xs-3 zhuangtai-click">买</div>
+        <div class="col-xs-1 zhuangtai-click text-right">卖</div>
+    </div>
+</div>
+<div class="date" style="margin-top: 0;border-top: none">
+    <div class="row">
+        <div class="col-xs-6">起<input id="datefrom" >
+            <div class="border-right-bg date-border-right-bg"></div>
+        </div>
+        <div class="col-xs-6 text-right"><input id="dateto">止</div>
+    </div>
+</div>
+
+<script>
+    var calendar = new datePicker();
+    calendar.init({
+        'trigger': '#datefrom', /*按钮选择器，用于触发弹出插件*/
+        'type': 'date', /*模式：date日期；datetime日期时间；time时间；ym年月；*/
+        'minDate': '1900-1-1', /*最小日期*/
+        'maxDate': '2100-12-31', /*最大日期*/
+        'onSubmit': function () {/*确认时触发事件*/
+            var theSelectData = calendar.value;
+        },
+        'onClose': function () {/*取消时触发事件*/
+        }
+    });
+    var calendar1 = new datePicker();
+    calendar1.init({
+        'trigger': '#dateto', /*按钮选择器，用于触发弹出插件*/
+        'type': 'date', /*模式：date日期；datetime日期时间；time时间；ym年月；*/
+        'minDate': '1900-1-1', /*最小日期*/
+        'maxDate': '2100-12-31', /*最大日期*/
+        'onSubmit': function () {/*确认时触发事件*/
+            var theSelectData = calendar.value;
+        },
+        'onClose': function () {/*取消时触发事件*/
+        }
+    });
+</script>
+
+
+<div class="padding-lr-30 tongji-he clearfix">
+        <div>小计 : 0</div>
+        <div>有效交易量 : 0</div>
+        <div>买 : 0</div>
+        <div> 卖 : 0</div>
+        <div style="margin-right: 0">总盈亏 : 0.00</div>
+</div>
+
+<div class="padding-lr-30">
+    <div class="row">
+        <div class="col-xs-2 his-red his-size">SELL</div>
+        <div class="col-xs-10">
+            <div class="history his1">
+                <img class="fl his-click" src="images/silde_06.png" hiskai="true" width="15">
+                <div class="fl">产品名称:EURUSD#</div>
+                <div class="fr">订单号:332240980</div>
+            </div>
+            <div class="his-zi">
+                <div class="history his2">
+                    <div class="fl">开仓价</div>
+                    <div class="fr">平仓价</div>
+                </div>
+                <div class="history his3">
+                    <div class="fl">1.11229</div>
+                    <div class="fr">1.11229</div>
+                </div>
+                <div class="history his4">
+                    <div class="fl">2017-05-19 08:20</div>
+                    <div class="fr">2017-05-19 08:20</div>
+                </div>
+                <div class="history his5">
+                    <div class="fl his-red">盈亏:$-362.95</div>
+                    <div class="fr ">交易量:0.39</div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-2 his-green his-size">BUY</div>
+        <div class="col-xs-10">
+            <div class="history his1">
+                <img class="fl his-click" src="images/silde_06.png" hiskai="true" width="15">
+                <div class="fl">产品名称:EURUSD#</div>
+                <div class="fr">订单号:332240980</div>
+            </div>
+            <div class="his-zi">
+                <div class="history his2">
+                    <div class="fl">开仓价</div>
+                    <div class="fr">平仓价</div>
+                </div>
+                <div class="history his3">
+                    <div class="fl">1.11229</div>
+                    <div class="fr">1.11229</div>
+                </div>
+                <div class="history his4">
+                    <div class="fl">2017-05-19 08:20</div>
+                    <div class="fr">2017-05-19 08:20</div>
+                </div>
+                <div class="history his5">
+                    <div class="fl his-green">盈亏:$-362.95</div>
+                    <div class="fr ">交易量:0.39</div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-2 his-red his-size">SELL</div>
+        <div class="col-xs-10">
+            <div class="history his1">
+                <img class="fl his-click" src="images/silde_06.png" hiskai="true" width="15">
+                <div class="fl">产品名称:EURUSD#</div>
+                <div class="fr">订单号:332240980</div>
+            </div>
+            <div class="his-zi">
+                <div class="history his2">
+                    <div class="fl">开仓价</div>
+                    <div class="fr">平仓价</div>
+                </div>
+                <div class="history his3">
+                    <div class="fl">1.11229</div>
+                    <div class="fr">1.11229</div>
+                </div>
+                <div class="history his4">
+                    <div class="fl">2017-05-19 08:20</div>
+                    <div class="fr">2017-05-19 08:20</div>
+                </div>
+                <div class="history his5">
+                    <div class="fl his-red">盈亏:$-362.95</div>
+                    <div class="fr ">交易量:0.39</div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
